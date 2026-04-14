@@ -79,12 +79,12 @@ export function Hero() {
 
           {/* Imagen producto */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 rounded-2xl bg-muted flex items-center justify-center">
+            <div className="relative w-80 h-80 sm:w-[480px] sm:h-[480px] lg:w-[540px] lg:h-[540px] rounded-2xl bg-muted flex items-center justify-center">
               <Image
                 src="/moodcalm-producto.png"
                 alt="MoodCalm — suplemento en polvo para el estrés"
                 fill
-                className="object-contain p-8"
+                className="object-contain p-4"
                 priority
               />
             </div>
