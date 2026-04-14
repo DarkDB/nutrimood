@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
           quantity: item.quantity,
         };
       }),
-      automatic_tax: { enabled: true },
+      automatic_tax: { enabled: false },
       shipping_address_collection: { allowed_countries: ["ES"] },
       ...(customerEmail ? { customer_email: customerEmail } : {}),
       success_url: `${baseUrl}/confirmacion?session_id={CHECKOUT_SESSION_ID}`,
