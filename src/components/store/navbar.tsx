@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "@/components/store/cart-provider";
 import { cn } from "@/lib/utils";
@@ -12,15 +11,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <nav className="max-w-[1280px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo-nutrimood.jpg"
-            alt="NutriMood"
-            width={120}
-            height={40}
-            className="h-8 w-auto object-contain"
-            priority
-          />
+        <Link href="/" className="font-heading font-bold text-xl text-primary">
+          NutriMood
         </Link>
 
         <div className="flex items-center gap-6">

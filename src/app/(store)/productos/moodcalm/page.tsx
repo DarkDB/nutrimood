@@ -138,7 +138,7 @@ export default async function MoodCalmPage() {
                   MoodCalm
                 </h1>
                 <p className="text-muted-foreground mt-1">
-                  Polvo para disolver · 20 sobres · Sabor neutro
+                  Polvo para disolver · 20 sobres · Frambuesa y limón
                 </p>
               </div>
 
