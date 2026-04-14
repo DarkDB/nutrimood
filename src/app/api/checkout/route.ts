@@ -5,6 +5,7 @@ import { db } from "@/lib/db";
 interface CheckoutItem {
   productId: string;
   quantity: number;
+  unitPrice?: number; // precio descontado del pack (en céntimos)
 }
 
 export async function POST(req: NextRequest) {
@@ -44,6 +45,7 @@ export async function POST(req: NextRequest) {
       mode: "payment",
       line_items: items.map((item) => {
         const product = products.find((p: { id: string }) => p.id === item.productId)!;
+        const unitAmount = item.unitPrice ?? product.price;
         return {
           price_data: {
             currency: "eur",
@@ -51,7 +53,7 @@ export async function POST(req: NextRequest) {
               name: product.name,
               metadata: { productId: product.id },
             },
-            unit_amount: product.price,
+            unit_amount: unitAmount,
           },
           quantity: item.quantity,
         };
