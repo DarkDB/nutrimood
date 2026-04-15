@@ -4,6 +4,7 @@ import { Shield, Truck, RotateCcw, Star, Zap, Users } from "lucide-react";
 import { PackSelector } from "@/components/store/pack-selector";
 import { PaymentBadges } from "@/components/store/payment-badges";
 import { ProductPageClient } from "./product-page-client";
+import { FounderStory } from "@/components/store/founder-story";
 import { db } from "@/lib/db";
 import { SP } from "@/lib/social-proof";
 
@@ -261,8 +262,13 @@ export default async function MoodCalmPage() {
           </div>
         </div>
 
+        {/* Historia del fundador */}
+        <div className="mt-16 sm:mt-20 -mx-4 sm:-mx-6">
+          <FounderStory />
+        </div>
+
         {/* Reviews */}
-        <div className="mt-16 sm:mt-20">
+        <div className="mt-0 sm:mt-4">
           <div className="flex items-center gap-4 mb-8">
             <div>
               <h2 className="text-2xl sm:text-3xl font-heading font-bold text-primary">

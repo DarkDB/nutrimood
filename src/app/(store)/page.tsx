@@ -11,6 +11,7 @@ import { IngredientsTable } from "@/components/store/ingredients-table";
 import { ComparisonTable } from "@/components/store/comparison-table";
 import { ForWhom } from "@/components/store/for-whom";
 import { Testimonials } from "@/components/store/testimonials";
+import { FounderStory } from "@/components/store/founder-story";
 import { FAQ } from "@/components/store/faq";
 
 export const metadata: Metadata = {
@@ -175,7 +176,10 @@ export default function HomePage() {
       {/* 10. Para quién es — honestidad que convierte */}
       <ForWhom />
 
-      {/* 11. Testimonios — prueba social ampliada */}
+      {/* 11. Historia del fundador — conexión emocional */}
+      <FounderStory />
+
+      {/* 12. Testimonios — prueba social ampliada */}
       <Testimonials />
 
       {/* 12. FAQ */}
