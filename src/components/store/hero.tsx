@@ -21,9 +21,9 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-              MoodCalm es el suplemento en polvo con KSM-66 Ashwagandha, L-Theanine y
-              Magnesio Glicinato que ayuda a tu cuerpo a gestionar el estrés desde dentro.
-              Sin nervios. Sin cafeína. Solo calma de verdad.
+              MoodCalm es el suplemento en polvo con KSM-66® Ashwagandha, L-Theanine y
+              Magnesio Glicinato que ayuda a tu cuerpo a regular el cortisol desde dentro.
+              Sin azúcar. Sin OGM. Sin estimulantes. Solo calma de verdad.
             </p>
 
             {/* Social proof mini */}

@@ -11,29 +11,29 @@ import { SP } from "@/lib/social-proof";
 export const metadata: Metadata = {
   title: "MoodCalm — Suplemento para el control del estrés",
   description:
-    "MoodCalm con KSM-66 Ashwagandha, L-Theanine y Magnesio Glicinato. Reduce el cortisol y recupera tu calma. 32 € · 20 sobres · Envío a España.",
+    "MoodCalm con 300 mg KSM-66® Ashwagandha, 400 mg L-Theanine y Magnesio Glicinato. Sin azúcar, sin OGM. Reduce el cortisol y recupera tu calma. 32 € · 20 sobres · Envío a España.",
 };
 
 const ingredientsDetail = [
   {
     name: "KSM-66® Ashwagandha",
-    dose: "600 mg",
-    desc: "El extracto de raíz más estudiado del mercado con más de 22 estudios clínicos. Reduce el cortisol sérico hasta un 27% y mejora la resistencia al estrés.",
+    dose: "300 mg",
+    desc: "El extracto de raíz más estudiado del mercado con más de 22 estudios clínicos. A 300 mg/día — la dosis exacta de los estudios — reduce el cortisol sérico hasta un 27% y mejora la resistencia al estrés.",
   },
   {
     name: "L-Theanine",
-    dose: "200 mg",
-    desc: "Aminoácido del té verde que induce ondas alfa cerebrales — el estado mental de relajación alerta. Actúa en 30–60 minutos.",
+    dose: "400 mg",
+    desc: "Dosis clínica superior de este aminoácido del té verde. Induce ondas alfa cerebrales — relajación alerta, sin somnolencia. Acción visible en 30–60 minutos.",
   },
   {
     name: "Magnesio Glicinato",
-    dose: "300 mg",
-    desc: "La forma de magnesio con mejor absorción. Esencial para más de 300 reacciones enzimáticas, incluyendo la regulación del sistema nervioso.",
+    dose: "100 mg",
+    desc: "La forma de magnesio con mejor absorción intestinal. Se une directamente al sistema nervioso para calmar la hiperactivación neuronal sin efectos secundarios.",
   },
   {
     name: "Vitamina D3",
-    dose: "2000 UI",
-    desc: "El 70% de los españoles tiene déficit. Influye directamente en el estado de ánimo, la inmunidad y la recuperación.",
+    dose: "1.000 UI",
+    desc: "El 70% de los españoles tiene déficit de vitamina D. Influye directamente en el estado de ánimo, la inmunidad y la recuperación del sistema nervioso.",
   },
 ];
 
@@ -184,8 +184,8 @@ export default async function MoodCalmPage() {
 
               {/* Descripción corta */}
               <p className="text-muted-foreground leading-relaxed border-l-2 border-accent pl-4">
-                Fórmula con dosis clínicas de KSM-66, L-Theanine y Magnesio Glicinato. Sin estimulantes,
-                sin azúcar, sin gluten. Resultados visibles a partir de la 2ª–3ª semana.
+                300 mg KSM-66® · 400 mg L-Theanine · 100 mg Magnesio Glicinato · 1.000 UI D3.
+                Sin azúcar, sin OGM, sin ingredientes artificiales. Resultados visibles a partir de la 2ª–3ª semana.
               </p>
 
               {/* Garantías rápidas */}

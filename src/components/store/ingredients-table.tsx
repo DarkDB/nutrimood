@@ -1,25 +1,25 @@
 const ingredients = [
   {
     name: "KSM-66® Ashwagandha",
-    dose: "600 mg",
-    benefit: "Reduce el cortisol sérico hasta un 27%. El extracto de raíz más estudiado del mercado.",
+    dose: "300 mg",
+    benefit: "Reduce el cortisol sérico hasta un 27%. La dosis exacta de los estudios clínicos publicados.",
     evidence: "Alta",
   },
   {
     name: "L-Theanine",
-    dose: "200 mg",
-    benefit: "Promueve relajación sin somnolencia. Sinergiza con el ritual matutino.",
+    dose: "400 mg",
+    benefit: "Dosis clínica superior. Induce ondas alfa cerebrales: relajación alerta sin somnolencia.",
     evidence: "Alta",
   },
   {
     name: "Magnesio Glicinato",
-    dose: "300 mg",
-    benefit: "Forma de magnesio con máxima biodisponibilidad. Clave para el sistema nervioso.",
+    dose: "100 mg",
+    benefit: "Forma de magnesio con máxima biodisponibilidad. Clave para calmar el sistema nervioso.",
     evidence: "Alta",
   },
   {
     name: "Vitamina D3",
-    dose: "2000 UI",
+    dose: "1.000 UI",
     benefit: "El 70% de los españoles tiene déficit. Impacta directamente en el estado de ánimo.",
     evidence: "Media-Alta",
   },
