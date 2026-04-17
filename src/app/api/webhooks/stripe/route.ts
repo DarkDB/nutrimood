@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { resend, FROM_EMAIL } from "@/lib/resend";
 import { render } from "@react-email/components";
 import OrderConfirmation from "@/../emails/order-confirmation";
+import AbandonedCart from "@/../emails/abandoned-cart";
 import type { ShippingAddress } from "@/types";
 
 export async function POST(req: NextRequest) {
@@ -139,6 +140,28 @@ export async function POST(req: NextRequest) {
         subject: `Confirmación de pedido #${order.id.slice(0, 8).toUpperCase()} — NutriMood`,
         html: emailHtml,
       });
+    }
+
+    if (event.type === "checkout.session.expired") {
+      const session = event.data.object;
+      const customerEmail = session.customer_details?.email ?? session.customer_email;
+      const customerName = session.customer_details?.name ?? undefined;
+
+      if (customerEmail) {
+        const baseUrl = process.env.NEXTAUTH_URL ?? "https://nutrimood.es";
+        const html = await render(
+          AbandonedCart({
+            customerName: customerName ?? undefined,
+            productUrl: `${baseUrl}/productos/moodcalm`,
+          })
+        );
+        await resend.emails.send({
+          from: FROM_EMAIL,
+          to: customerEmail,
+          subject: "¿Olvidaste algo? Tu MoodCalm te sigue esperando — NutriMood",
+          html,
+        });
+      }
     }
 
     if (event.type === "payment_intent.payment_failed") {
