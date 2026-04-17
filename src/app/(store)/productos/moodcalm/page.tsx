@@ -317,11 +317,10 @@ export default async function MoodCalmPage() {
         <div className="mt-16 sm:mt-20 bg-primary rounded-2xl p-8 sm:p-10 text-center">
           <div className="text-4xl mb-4">🛡️</div>
           <h2 className="text-2xl sm:text-3xl font-heading font-bold text-primary-foreground mb-3">
-            Garantía de satisfacción 30 días
+            3 semanas para notarlo. Si no, te devolvemos el dinero.
           </h2>
           <p className="text-primary-foreground/80 max-w-lg mx-auto text-sm leading-relaxed mb-6">
-            Si en 30 días no notas diferencia en cómo gestionas el estrés, te devolvemos el 100% del dinero.
-            Sin preguntas, sin complicaciones. Solo escríbenos a hola@nutrimood.es.
+            Tómalo cada día durante al menos 3 semanas — el tiempo que necesitan los ingredientes para actuar según los estudios clínicos. Si no notas ninguna diferencia en cómo gestionas el estrés, te devolvemos el 100%. Sin complicaciones. Solo escríbenos a hola@nutrimood.es.
           </p>
           <a
             href="#comprar"

@@ -192,11 +192,11 @@ export default function HomePage() {
             Sin riesgo
           </p>
           <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary-foreground">
-            Pruébalo 30 días o te devolvemos el dinero
+            Tómalo 3 semanas. Si no notas nada, te devolvemos el dinero.
           </h2>
           <p className="mt-4 text-primary-foreground/80 max-w-md mx-auto">
             MoodCalm por solo <strong className="text-primary-foreground">32 €</strong> (20 sobres · 1,60 €/sobre).
-            Si en un mes no notas diferencia, te reembolsamos el 100%. Sin preguntas.
+            Los ingredientes necesitan tiempo para actuar. Dales 3 semanas — si no notas diferencia, te reembolsamos el 100%. Sin complicaciones.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">

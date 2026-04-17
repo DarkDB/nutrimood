@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "¿Puedo devolverlo si no me funciona?",
-    a: "Sí. Tienes 30 días de garantía de satisfacción desde la recepción. Si no notas diferencia, te devolvemos el dinero sin preguntas. Además, como en toda la UE, tienes 14 días de derecho de desistimiento desde la entrega.",
+    a: "Sí. Los ingredientes de MoodCalm necesitan tiempo para actuar — los estudios clínicos del KSM-66 se hacen a 4-8 semanas. Por eso te pedimos que lo tomes cada día durante al menos 3 semanas. Si tras ese tiempo no notas ninguna diferencia en cómo gestionas el estrés, te devolvemos el 100% del dinero. Sin complicaciones, solo escríbenos a hola@nutrimood.es. Además, como en toda la UE, tienes 14 días de derecho de desistimiento desde la entrega.",
   },
   {
     q: "¿Puedo tomarlo con otros suplementos o medicación?",
