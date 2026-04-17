@@ -75,44 +75,46 @@ export default function CarritoPage() {
           {items.map((item) => (
             <div
               key={item.productId}
-              className="flex gap-4 items-center bg-card border border-border rounded-lg p-4"
+              className="bg-card border border-border rounded-lg p-4"
             >
-              <div className="flex-1">
-                <p className="font-medium text-foreground">{item.productName}</p>
-                <p className="text-sm text-muted-foreground mt-0.5">
-                  {formatPrice(item.unitPrice)} por unidad
-                </p>
-              </div>
-
-              <div className="flex items-center border border-border rounded-lg overflow-hidden">
+              {/* Fila superior: nombre + eliminar */}
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-medium text-foreground truncate">{item.productName}</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">
+                    {formatPrice(item.unitPrice)} por unidad
+                  </p>
+                </div>
                 <button
-                  onClick={() => updateQuantity(item.productId, item.quantity - 1)}
-                  className="px-3 py-1.5 hover:bg-muted transition-colors text-sm"
+                  onClick={() => removeItem(item.productId)}
+                  className="p-1.5 hover:bg-muted rounded-lg text-muted-foreground hover:text-destructive transition-colors shrink-0"
+                  aria-label="Eliminar producto"
                 >
-                  −
-                </button>
-                <span className="px-3 text-sm font-medium">{item.quantity}</span>
-                <button
-                  onClick={() => updateQuantity(item.productId, item.quantity + 1)}
-                  className="px-3 py-1.5 hover:bg-muted transition-colors text-sm"
-                >
-                  +
+                  <Trash2 size={16} strokeWidth={1.5} />
                 </button>
               </div>
 
-              <div className="text-right min-w-[72px]">
+              {/* Fila inferior: cantidad + total */}
+              <div className="flex items-center justify-between mt-3">
+                <div className="flex items-center border border-border rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => updateQuantity(item.productId, item.quantity - 1)}
+                    className="px-3 py-1.5 hover:bg-muted transition-colors text-sm"
+                  >
+                    −
+                  </button>
+                  <span className="px-3 text-sm font-medium">{item.quantity}</span>
+                  <button
+                    onClick={() => updateQuantity(item.productId, item.quantity + 1)}
+                    className="px-3 py-1.5 hover:bg-muted transition-colors text-sm"
+                  >
+                    +
+                  </button>
+                </div>
                 <p className="font-semibold text-foreground">
                   {formatPrice(item.unitPrice * item.quantity)}
                 </p>
               </div>
-
-              <button
-                onClick={() => removeItem(item.productId)}
-                className="p-1.5 hover:bg-muted rounded-lg text-muted-foreground hover:text-destructive transition-colors"
-                aria-label="Eliminar producto"
-              >
-                <Trash2 size={16} strokeWidth={1.5} />
-              </button>
             </div>
           ))}
         </div>

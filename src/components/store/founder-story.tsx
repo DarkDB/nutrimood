@@ -52,7 +52,7 @@ export function FounderStory() {
                 className="absolute -left-1 -top-1 text-accent/40"
                 strokeWidth={1.5}
               />
-              <p className="text-lg sm:text-xl font-heading font-semibold text-primary italic leading-snug">
+              <p className="text-base sm:text-xl font-heading font-semibold text-primary italic leading-snug">
                 &ldquo;El momento de tomármelo es como un respiro.&rdquo;
               </p>
               <cite className="block mt-2 text-sm text-muted-foreground not-italic">

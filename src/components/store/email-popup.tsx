@@ -79,7 +79,7 @@ export function EmailPopup() {
         aria-label="Oferta exclusiva"
         className="fixed z-50 inset-x-4 top-1/2 -translate-y-1/2 sm:inset-x-auto sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-md"
       >
-        <div className="bg-card border border-border rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-card border border-border rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
           {/* Header decorativo */}
           <div className="bg-primary px-6 pt-8 pb-6 text-center relative">
             <button

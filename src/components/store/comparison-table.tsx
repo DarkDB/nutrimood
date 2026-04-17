@@ -35,16 +35,16 @@ export function ComparisonTable() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-border">
-                <th className="text-left px-5 py-3.5 text-muted-foreground font-medium w-[55%]" />
-                <th className="px-4 py-3.5 text-center">
-                  <span className="inline-block bg-accent text-white text-xs font-bold px-2.5 py-1 rounded-full">
+                <th className="text-left px-3 sm:px-5 py-3.5 text-muted-foreground font-medium w-[50%]" />
+                <th className="px-2 sm:px-4 py-3.5 text-center">
+                  <span className="inline-block bg-accent text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full">
                     MoodCalm
                   </span>
                 </th>
-                <th className="px-4 py-3.5 text-center text-xs font-medium text-muted-foreground">
+                <th className="px-2 sm:px-4 py-3.5 text-center text-[10px] sm:text-xs font-medium text-muted-foreground">
                   Pastillas<br />farmacia
                 </th>
-                <th className="px-4 py-3.5 text-center text-xs font-medium text-muted-foreground">
+                <th className="px-2 sm:px-4 py-3.5 text-center text-[10px] sm:text-xs font-medium text-muted-foreground">
                   Sin<br />suplemento
                 </th>
               </tr>
@@ -52,14 +52,14 @@ export function ComparisonTable() {
             <tbody className="bg-card divide-y divide-border">
               {rows.map((row) => (
                 <tr key={row.label} className="hover:bg-muted/30 transition-colors">
-                  <td className="px-5 py-3 text-muted-foreground">{row.label}</td>
-                  <td className="px-4 py-3 bg-accent/5 text-center">
+                  <td className="px-3 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm text-muted-foreground">{row.label}</td>
+                  <td className="px-2 sm:px-4 py-2.5 sm:py-3 bg-accent/5 text-center">
                     <Icon val={row.moodcalm} />
                   </td>
-                  <td className="px-4 py-3 text-center">
+                  <td className="px-2 sm:px-4 py-2.5 sm:py-3 text-center">
                     <Icon val={row.farmacia} />
                   </td>
-                  <td className="px-4 py-3 text-center">
+                  <td className="px-2 sm:px-4 py-2.5 sm:py-3 text-center">
                     <Icon val={row.nada} />
                   </td>
                 </tr>

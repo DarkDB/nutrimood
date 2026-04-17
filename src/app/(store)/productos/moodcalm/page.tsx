@@ -112,7 +112,7 @@ export default async function MoodCalmPage() {
             </div>
 
             {/* Social proof flotante */}
-            <div className="mt-4 flex items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5">
                 <Users size={14} strokeWidth={1.5} className="text-primary" />
                 <strong className="text-foreground">{SP.totalCustomers}</strong> clientes
