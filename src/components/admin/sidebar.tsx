@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, ShoppingBag, Package, Users, LogOut } from "lucide-react";
+import { LayoutDashboard, ShoppingBag, Package, Users, Mail, LogOut } from "lucide-react";
 import { signOut } from "next-auth/react";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,7 @@ const links = [
   { href: "/admin/pedidos", label: "Pedidos", icon: ShoppingBag, exact: false },
   { href: "/admin/inventario", label: "Inventario", icon: Package, exact: false },
   { href: "/admin/clientes", label: "Clientes", icon: Users, exact: false },
+  { href: "/admin/suscriptores", label: "Suscriptores", icon: Mail, exact: false },
 ];
 
 export function Sidebar() {
