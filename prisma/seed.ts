@@ -1,7 +1,12 @@
-import { PrismaClient } from "@prisma/client";
+import { config } from "dotenv";
+config({ path: ".env.local" });
+
+import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "../src/generated/prisma/client";
 import bcrypt from "bcryptjs";
 
-const db = new PrismaClient();
+const adapter = new PrismaPg({ connectionString: process.env.DIRECT_URL ?? process.env.DATABASE_URL! });
+const db = new PrismaClient({ adapter });
 
 async function main() {
   // Admin user
