@@ -140,6 +140,29 @@ export async function POST(req: NextRequest) {
         subject: `Confirmación de pedido #${order.id.slice(0, 8).toUpperCase()} — NutriMood`,
         html: emailHtml,
       });
+
+      // Notificación interna al dueño
+      const itemsSummary = lineItems.data.map((li) => {
+        const prod = li.price?.product;
+        const name = typeof prod === "object" && prod !== null && "name" in prod
+          ? (prod as { name: string }).name
+          : (li.description ?? "Producto");
+        return `${name} ×${li.quantity ?? 1}`;
+      }).join(", ");
+
+      await resend.emails.send({
+        from: FROM_EMAIL,
+        to: "hola@nutrimood.es",
+        subject: `🛒 Nuevo pedido #${order.id.slice(0, 8).toUpperCase()} — ${new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR" }).format(total / 100)}`,
+        html: `
+          <p><strong>Nuevo pedido recibido</strong></p>
+          <p><strong>Cliente:</strong> ${customerName} (${customerEmail})</p>
+          <p><strong>Productos:</strong> ${itemsSummary}</p>
+          <p><strong>Total:</strong> ${new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR" }).format(total / 100)}</p>
+          <p><strong>Dirección:</strong> ${shippingAddress.street}, ${shippingAddress.postcode} ${shippingAddress.city}</p>
+          <p><a href="https://nutrimood.es/admin/pedidos/${order.id}">Ver pedido en el admin →</a></p>
+        `,
+      });
     }
 
     if (event.type === "checkout.session.expired") {
